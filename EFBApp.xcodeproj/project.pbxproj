@@ -11,6 +11,11 @@
 		A41D7F73278C52E400B8BDAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41D7F72278C52E400B8BDAB /* ContentView.swift */; };
 		A41D7F75278C52E600B8BDAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41D7F74278C52E600B8BDAB /* Assets.xcassets */; };
 		A41D7F78278C52E600B8BDAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41D7F77278C52E600B8BDAB /* Preview Assets.xcassets */; };
+		A44E5AF6278C8CB000B40F5A /* ModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44E5AF5278C8CB000B40F5A /* ModuleView.swift */; };
+		A4C3B5242790388F00134996 /* EFBToolKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4C3B5232790388F00134996 /* EFBToolKit */; };
+		A4C3B5262790403F00134996 /* MockModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C3B5252790403F00134996 /* MockModule.swift */; };
+		A4ECB15A278C570500F89988 /* EFBModule2 in Frameworks */ = {isa = PBXBuildFile; productRef = A4ECB159278C570500F89988 /* EFBModule2 */; };
+		A4ECB15D278C571D00F89988 /* EFBModule1 in Frameworks */ = {isa = PBXBuildFile; productRef = A4ECB15C278C571D00F89988 /* EFBModule1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,8 @@
 		A41D7F72278C52E400B8BDAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A41D7F74278C52E600B8BDAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A41D7F77278C52E600B8BDAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A44E5AF5278C8CB000B40F5A /* ModuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleView.swift; sourceTree = "<group>"; };
+		A4C3B5252790403F00134996 /* MockModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4ECB15D278C571D00F89988 /* EFBModule1 in Frameworks */,
+				A4C3B5242790388F00134996 /* EFBToolKit in Frameworks */,
+				A4ECB15A278C570500F89988 /* EFBModule2 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,9 +62,11 @@
 			isa = PBXGroup;
 			children = (
 				A41D7F70278C52E400B8BDAB /* EFBAppApp.swift */,
+				A4C3B5252790403F00134996 /* MockModule.swift */,
 				A41D7F72278C52E400B8BDAB /* ContentView.swift */,
 				A41D7F74278C52E600B8BDAB /* Assets.xcassets */,
 				A41D7F76278C52E600B8BDAB /* Preview Content */,
+				A44E5AF5278C8CB000B40F5A /* ModuleView.swift */,
 			);
 			path = EFBApp;
 			sourceTree = "<group>";
@@ -83,6 +95,11 @@
 			dependencies = (
 			);
 			name = EFBApp;
+			packageProductDependencies = (
+				A4ECB159278C570500F89988 /* EFBModule2 */,
+				A4ECB15C278C571D00F89988 /* EFBModule1 */,
+				A4C3B5232790388F00134996 /* EFBToolKit */,
+			);
 			productName = EFBApp;
 			productReference = A41D7F6D278C52E400B8BDAB /* EFBApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,11 @@
 				Base,
 			);
 			mainGroup = A41D7F64278C52E400B8BDAB;
+			packageReferences = (
+				A4ECB158278C570500F89988 /* XCRemoteSwiftPackageReference "EFBModule2" */,
+				A4ECB15B278C571D00F89988 /* XCRemoteSwiftPackageReference "EFBModule1" */,
+				A4C3B5222790388E00134996 /* XCRemoteSwiftPackageReference "EFBToolKit" */,
+			);
 			productRefGroup = A41D7F6E278C52E400B8BDAB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A41D7F73278C52E400B8BDAB /* ContentView.swift in Sources */,
+				A44E5AF6278C8CB000B40F5A /* ModuleView.swift in Sources */,
 				A41D7F71278C52E400B8BDAB /* EFBAppApp.swift in Sources */,
+				A4C3B5262790403F00134996 /* MockModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +365,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A4C3B5222790388E00134996 /* XCRemoteSwiftPackageReference "EFBToolKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/guillaumerameycapg/EFBToolKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		A4ECB158278C570500F89988 /* XCRemoteSwiftPackageReference "EFBModule2" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/guillaumerameycapg/EFBModule2";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		A4ECB15B278C571D00F89988 /* XCRemoteSwiftPackageReference "EFBModule1" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/guillaumerameycapg/EFBModule1";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A4C3B5232790388F00134996 /* EFBToolKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4C3B5222790388E00134996 /* XCRemoteSwiftPackageReference "EFBToolKit" */;
+			productName = EFBToolKit;
+		};
+		A4ECB159278C570500F89988 /* EFBModule2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4ECB158278C570500F89988 /* XCRemoteSwiftPackageReference "EFBModule2" */;
+			productName = EFBModule2;
+		};
+		A4ECB15C278C571D00F89988 /* EFBModule1 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4ECB15B278C571D00F89988 /* XCRemoteSwiftPackageReference "EFBModule1" */;
+			productName = EFBModule1;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A41D7F65278C52E400B8BDAB /* Project object */;
 }
