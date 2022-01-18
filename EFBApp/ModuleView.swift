@@ -29,11 +29,11 @@ struct ModuleView: View {
 
       Spacer()
     }
-    .foregroundColor(.white)
+    .foregroundColor(.secondary)
     .frame(maxWidth: .infinity)
     .background(
       LinearGradient(
-        colors: [Color(#colorLiteral(red: 0.004859850742, green: 0.09608627111, blue: 0.5749928951, alpha: 1)), Color(#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1))],
+        colors: [Color(#colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1)), Color(#colorLiteral(red: 0.370555222, green: 0.3705646992, blue: 0.3705595732, alpha: 1))],
         startPoint: .leading,
         endPoint: .trailing)
     )

@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "EFBModule1",
+        "repositoryURL": "https://github.com/guillaumerameycapg/EFBModule1",
+        "state": {
+          "branch": "main",
+          "revision": "9ad44d7ed40e08cf119c4f720b262caeebfb919a",
+          "version": null
+        }
+      },
+      {
+        "package": "EFBModule2",
+        "repositoryURL": "https://github.com/guillaumerameycapg/EFBModule2",
+        "state": {
+          "branch": "main",
+          "revision": "52161f8cbb5543971bc046a4a6983e2d1ff219b2",
+          "version": null
+        }
+      },
+      {
+        "package": "EFBToolKit",
+        "repositoryURL": "https://github.com/guillaumerameycapg/EFBToolKit",
+        "state": {
+          "branch": "main",
+          "revision": "1b6466d176a09ef5f41318e358538d038d87e751",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

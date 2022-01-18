@@ -15,45 +15,48 @@ struct ContentView: View {
   let module2 = EFBModule2()
 
   var body: some View {
-    NavigationView {
-      ZStack {
-        LinearGradient(
-          colors: [Color(#colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)), Color(#colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1))],
-          startPoint: .topLeading,
-          endPoint: .bottomTrailing)
-          .ignoresSafeArea()
-
-        ScrollView {
-          Text("Welcome back John")
-            .font(.largeTitle)
-            .fontWeight(.bold)
-            .padding(.vertical)
-
-          NavigationLink {
-            MapView()
-          } label: {
-            ModuleView(module: module1)
-          }
-
-          NavigationLink {
-            WeatherView()
-          } label: {
-            ModuleView(module: module2)
-          }
-
-          ModuleView(module: MockModule.mockPlane)
-        }
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-          ToolbarItem(placement: .navigationBarLeading) {
-            Image(systemName: "person.circle")
-          }
-          ToolbarItem(placement: .navigationBarTrailing) {
-            Image(systemName: "slider.horizontal.3")
+    TabView {
+      MapView()
+        .tabItem {
+          HStack {
+            Image(systemName: module1.icon)
+            Text(module1.title)
           }
         }
-      }
+
+      WeatherView()
+        .tabItem {
+          HStack {
+            Image(systemName: module2.icon)
+            Text(module2.title)
+          }
+        }
+
+      Text("")
+        .tabItem {
+          HStack {
+            Image(systemName: "text.badge.checkmark")
+            Text("Checklist")
+          }
+        }
+
+      Text("")
+        .tabItem {
+          HStack {
+            Image(systemName: "airplane")
+            Text("Arcraft")
+          }
+        }
+
+      Text("")
+        .tabItem {
+          HStack {
+            Image(systemName: "tray.and.arrow.down")
+            Text("Downloads")
+          }
+        }
     }
+    .accentColor(.primary)
   }
 }
 
